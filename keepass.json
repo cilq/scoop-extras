@@ -4,12 +4,17 @@
     "url": "https://sourceforge.net/projects/keepass/files/KeePass%202.x/2.37/KeePass-2.37.zip",
     "hash": "aafe301ef2fe6052041a44394eb428516505eff2efda2034ef32fb9347e4980d",
     "bin": "KeePass.exe",
+    "persist": [
+	    "KeePass.config.xml",
+	    "Plugins"
+    ],
     "shortcuts": [
         [
             "KeePass.exe",
             "KeePass"
         ]
     ],
+    "pre_install": "touch $dir/KeePass.config.xml",
     "checkver": {
         "url": "https://sourceforge.net/projects/keepass/",
         "re": "KeePass-([\\d.]+)-Setup.exe"
